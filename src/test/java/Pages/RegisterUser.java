@@ -22,9 +22,7 @@ public class RegisterUser extends Base {
     }
 
     public void RegisterUserMethod(DataTable dataTable) {
-        // Convert DataTable to a List of Maps
         List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
-        // Get the first (and only) row of data
         Map<String, String> userDetails = data.getFirst();
         Type(userDetails.get("firstName"),FirstNameLocator);
         Type(userDetails.get("lastName"),LastNameLocator);

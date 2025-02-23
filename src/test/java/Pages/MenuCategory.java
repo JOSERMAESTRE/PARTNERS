@@ -15,11 +15,8 @@ public class MenuCategory extends Base {
     }
     public void BrowseMenu(String category, String option) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        // Esperar hasta que el elemento de la categoría esté visible y clickeable
         WebElement categoryElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(), '" + category + "')]")));
         categoryElement.click();
-
-        // Esperar hasta que el elemento de la opción esté visible y clickeable
         WebElement optionElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(), '" + option + "')]")));
         optionElement.click();
     }

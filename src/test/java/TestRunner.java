@@ -3,8 +3,8 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = "src/test/java/Features",   // Ruta a los archivos de características Gherkin
-        glue = "Steps",                        // Ruta a los archivos de Step Definitions
+        features = "src/test/java/Features",
+        glue = "Steps",
         plugin = {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
         monochrome = true
 )
